@@ -5,7 +5,7 @@ const UserList = ({ users }) => {
     <div className="container mx-auto p-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {users.map((user) => (
-          <Link key={user.id} to={`/userDetails/${user.id}`}>
+          <Link key={user.id} to={`/user/${user.id}`}>
             <div key={user.id} className="bg-white shadow-md rounded p-4">
               <img
                 src={user.image}
