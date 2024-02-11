@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       <Button>
-        <h1>Bangladesh</h1>
+    Navbar
       </Button>
     </div>
   );
