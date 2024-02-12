@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import UserList from "./UserList";
+import "./AllUser.css";
 
 const AllUser = ({ users }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -27,18 +28,28 @@ const AllUser = ({ users }) => {
   });
 
   return (
-    <div>
-      <h1 className="text-4xl font-bold text-center my-8">User List</h1>
-      <div className="flex justify-between items-center mb-4">
+    <div className="">
+      <div className="flex justify-center ">
+        <customTitle className="text-4xl font-bold text-center my-8">
+          <button class="button" data-text="Awesome">
+            <span class="actual-text">&nbsp;Users&nbsp;</span>
+            <span aria-hidden="true" class="hover-text">
+              &nbsp;Users&nbsp;
+            </span>
+          </button>
+        </customTitle>
+      </div>
+      <div className="flex justify-center gap-4 items-center mb-4">
         <input
           type="text"
           placeholder="Search by name"
-          className="p-2 border border-gray-300 rounded"
+          className="input p-2 border border-gray-300 rounded"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+
         <select
-          className="p-2 border border-gray-300 rounded"
+          className="p-2 border text-white border-gray-300 rounded input"
           value={sortOption}
           onChange={(e) => setSortOption(e.target.value)}
         >

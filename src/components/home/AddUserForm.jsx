@@ -1,6 +1,6 @@
 // AddUserForm.jsx
 import React, { useState } from "react";
-
+import "./AddUserForm.css";
 const AddUserForm = ({ onAddUser }) => {
   const [newUser, setNewUser] = useState({
     firstName: "",
@@ -69,79 +69,93 @@ const AddUserForm = ({ onAddUser }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        First Name:
-        <input
-          type="text"
-          name="firstName"
-          value={newUser.firstName}
-          onChange={handleInputChange}
-        />
-      </label>
-      <br />
-      <label>
-        Last Name:
-        <input
-          type="text"
-          name="lastName"
-          value={newUser.lastName}
-          onChange={handleInputChange}
-        />
-      </label>
-      <br />
-      <label>
-        Email:
-        <input
-          type="email"
-          name="email"
-          value={newUser.email}
-          onChange={handleInputChange}
-        />
-      </label>
-      <br />
-      <label>
-        Street:
-        <input
-          type="text"
-          name="street"
-          value={newUser.address.street}
-          onChange={handleAddressChange}
-        />
-      </label>
-      <br />
-      <label>
-        Suite:
-        <input
-          type="text"
-          name="suite"
-          value={newUser.address.suite}
-          onChange={handleAddressChange}
-        />
-      </label>
-      <br />
-      <label>
-        City:
-        <input
-          type="text"
-          name="city"
-          value={newUser.address.city}
-          onChange={handleAddressChange}
-        />
-      </label>
-      <br />
-      <label>
-        Company Name:
-        <input
-          type="text"
-          name="name"
-          value={newUser.company.name}
-          onChange={handleCompanyChange}
-        />
-      </label>
-      <br />
-      <button type="submit">Add User</button>
-    </form>
+    <div className="border max-w-4xl mx-auto rounded-lg shadow-2xl">
+      <div className="flex justify-center">
+        <customTitle className="text-4xl font-bold text-center my-8">
+          <button class="button" data-text="Awesome">
+            <span class="actual-text">&nbsp;AddUser&nbsp;</span>
+            <span aria-hidden="true" class="hover-text">
+              &nbsp;AddUser&nbsp;
+            </span>
+          </button>
+        </customTitle>
+      </div>
+      <form onSubmit={handleSubmit}>
+        <div className="flex flex-col items-center gap-2">
+          <div>
+            <input
+              placeholder="First Name"
+              className="input p-2 border border-gray-300  rounded"
+              type="text"
+              name="firstName"
+              value={newUser.firstName}
+              onChange={handleInputChange}
+            />
+
+            <input
+              placeholder="Last Name"
+              className="input p-2 border border-gray-300  rounded"
+              type="text"
+              name="lastName"
+              value={newUser.lastName}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div>
+            <input
+              placeholder="Email"
+              className="input p-2 border border-gray-300  rounded"
+              type="email"
+              name="email"
+              value={newUser.email}
+              onChange={handleInputChange}
+            />
+
+            <input
+              placeholder="Street"
+              className="input p-2 border border-gray-300  rounded"
+              type="text"
+              name="street"
+              value={newUser.address.street}
+              onChange={handleAddressChange}
+            />
+          </div>
+          <div>
+            <input
+              placeholder="Suite"
+              className="input p-2 border border-gray-300  rounded"
+              type="text"
+              name="suite"
+              value={newUser.address.suite}
+              onChange={handleAddressChange}
+            />
+
+            <input
+              placeholder="City"
+              className="input p-2 border border-gray-300  rounded"
+              type="text"
+              name="city"
+              value={newUser.address.city}
+              onChange={handleAddressChange}
+            />
+
+            <input
+              placeholder="Company Name"
+              className="input p-2 border border-gray-300  rounded"
+              type="text"
+              name="name"
+              value={newUser.company.name}
+              onChange={handleCompanyChange}
+            />
+          </div>
+          <customHover>
+            <button class="button" type="submit">
+              Add User
+            </button>
+          </customHover>
+        </div>
+      </form>
+    </div>
   );
 };
 

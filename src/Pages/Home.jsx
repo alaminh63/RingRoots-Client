@@ -2,7 +2,7 @@ import AddUserForm from "@/components/home/AddUserForm";
 import AllUser from "@/components/home/AllUser";
 import { Button } from "@/components/ui/button";
 import React, { useEffect, useState } from "react";
-
+import './Home.css'
 const Home = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
@@ -16,8 +16,10 @@ const Home = () => {
   };
   return (
     <div>
-      <AllUser users={users} />
-      <AddUserForm onAddUser={handleAddUser} />
+      <customGradient>
+        <AllUser users={users} />
+        <AddUserForm onAddUser={handleAddUser} />
+      </customGradient>
     </div>
   );
 };
