@@ -149,9 +149,8 @@ const AddUserForm = ({ onAddUser }) => {
             />
           </div>
           <customHover>
-            <button class="button" type="submit">
-              Add User
-            </button>
+          <button className="my-8" id="btn">Add User</button>
+
           </customHover>
         </div>
       </form>

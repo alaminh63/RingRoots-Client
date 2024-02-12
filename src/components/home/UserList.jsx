@@ -5,7 +5,7 @@ const UserList = ({ users }) => {
   return (
     <customCard>
       <div className="container mx-auto p-4">
-        <div className="border grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {users.map((user) => (
             <div key={user.id}>
               <div className="md:ml-0 ml-9 card">

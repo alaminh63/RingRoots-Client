@@ -14,15 +14,15 @@ const Navbar = () => {
   const navbarData = [
     {
       title: "Home",
-      link: "/link3",
+    
     },
     {
       title: "All Users",
-      link: "/link1",
+  
     },
     {
       title: "Add Users",
-      link: "/link2",
+   
     },
   ];
 
@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className="md:hidden block">
         <Sidebar navbarData={navbarData} />
       </div>
-      <div className="md:block hidden  bg-black bg-opacity-90  py-4 ">
+      <div className="md:block hidden backdrop-blur-md border-b  py-4 ">
         <div className="flex justify-between mx-20 items-center">
           <div>
             <Link to="/">
@@ -50,7 +50,7 @@ const Navbar = () => {
             <NavigationMenuList className="flex gap-4 backdrop:blur-md">
               {navbarData.map((item, index) => (
                 <NavigationMenuItem key={index}>
-                  <Link to={item.link}>
+                  <Link to={item?.link}>
                     <li className="text-lg font-bold text-white">{item.title}</li>
                   </Link>
                 </NavigationMenuItem>

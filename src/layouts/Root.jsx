@@ -1,12 +1,17 @@
 import Navbar from "@/components/shared/Navbar/Navbar";
 import React from "react";
 import { Outlet } from "react-router-dom";
-
+import backgroundImage from "../../public/backgroundCustomImage.jpg";
+import Footer from "@/components/shared/Footer";
 const Root = () => {
   return (
-    <div>
+    <div
+      className=" bg-center"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
       <Navbar />
       <Outlet />
+      <Footer />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 customCard .card {
   width: 18em;
   height: 22.5em;
-  background: rgb(37, 42, 86);
+  background: rgb(32, 41, 113);
   transition: 1s ease-in-out;
   clip-path: polygon(
     30px 0%,

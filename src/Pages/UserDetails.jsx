@@ -16,26 +16,26 @@ const UserDetails = () => {
   }
 
   return (
-    <div className="container mx-auto p-4">
-      <div className="bg-white shadow-md rounded p-4">
+    <div className="container mt-20 text-white mx-auto p-4 customBackground rounded-3xl">
+      <div className=" shadow-md rounded p-4">
         <img
           src={user.image}
           alt={`${user.firstName} ${user.lastName}`}
           className="w-full h-32 object-cover mb-4 rounded"
         />
-        <div className="mb-2">
+        <div className="mb-2 ">
           <p className="text-lg font-bold">
-            {user.firstName} {user.lastName}
+            Name: {user.firstName} {user.lastName}
           </p>
-          <p className="text-gray-600">{user.email}</p>
+          <p className="">Email: {user.email}</p>
         </div>
         <div className="mb-2">
-          <p className="text-gray-800">{user.address?.address}</p>
-          <p className="text-gray-800">
-            {user.address?.city}, {user.address?.state}
+          <p className="">Addrss: {user.address?.address}</p>
+          <p className="">
+           City:  {user.address?.city}, State: {user.address?.state}
           </p>
         </div>
-        <p className="text-gray-700">{user.company?.name}</p>
+        <p className="">Company Name: {user.company?.name}</p>
       </div>
     </div>
   );
