@@ -6,7 +6,7 @@ import Footer from "@/components/shared/Footer";
 const Root = () => {
   return (
     <div
-      className=" bg-center"
+      className=" bg-center bg-cover"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <Navbar />
